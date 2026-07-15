@@ -1,0 +1,6 @@
+package com.lingyifan.lab.domain;
+import com.baomidou.mybatisplus.annotation.*; import java.time.*;
+@TableName("repair_order") public class RepairOrder {
+ @TableId(type=IdType.AUTO) private Long id; private Long equipmentId; private Long reporterId; private String description; private String status; private String resolution; private LocalDateTime createdAt; private LocalDateTime resolvedAt;
+ public RepairOrder(){} public Long getId(){return id;} public void setId(Long v){id=v;} public Long getEquipmentId(){return equipmentId;} public void setEquipmentId(Long v){equipmentId=v;} public Long getReporterId(){return reporterId;} public void setReporterId(Long v){reporterId=v;} public String getDescription(){return description;} public void setDescription(String v){description=v;} public String getStatus(){return status;} public void setStatus(String v){status=v;} public String getResolution(){return resolution;} public void setResolution(String v){resolution=v;} public LocalDateTime getCreatedAt(){return createdAt;} public void setCreatedAt(LocalDateTime v){createdAt=v;} public LocalDateTime getResolvedAt(){return resolvedAt;} public void setResolvedAt(LocalDateTime v){resolvedAt=v;}
+}
