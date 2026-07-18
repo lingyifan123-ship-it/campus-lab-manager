@@ -1,0 +1,1 @@
+package com.lingyifan.lab.mapper; import com.baomidou.mybatisplus.core.mapper.BaseMapper; import com.lingyifan.lab.domain.RepairOrder; public interface RepairOrderMapper extends BaseMapper<RepairOrder>{}
