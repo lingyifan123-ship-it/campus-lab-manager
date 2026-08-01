@@ -1,0 +1,9 @@
+spring:
+  application.name: campus-lab-manager
+  datasource:
+    url: ${DB_URL:jdbc:h2:mem:lab;MODE=MySQL;DB_CLOSE_DELAY=-1}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:}
+  sql.init.mode: always
+mybatis-plus.configuration.map-underscore-to-camel-case: true
+server.port: ${SERVER_PORT:8082}
