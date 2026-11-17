@@ -1,0 +1,629 @@
+{
+    "stages":  [
+                   {
+                       "stage":  1,
+                       "date":  "2026-07-15T16:11:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "实验室项目先开个头，Spring能起来了",
+                       "student_note":  "先建个空壳，端口和数据库都还没认真配。",
+                       "files":  [
+                                     "pom.xml",
+                                     ".gitignore",
+                                     "src/main/java/com/lingyifan/lab/LabManagerApplication.java"
+                                 ]
+                   },
+                   {
+                       "stage":  2,
+                       "date":  "2026-07-16T01:24:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "设备预约报修三个实体先写了",
+                       "student_note":  "照着需求表抄字段，状态先全用字符串省事。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/domain/Equipment.java",
+                                     "src/main/java/com/lingyifan/lab/domain/Reservation.java",
+                                     "src/main/java/com/lingyifan/lab/domain/RepairOrder.java"
+                                 ]
+                   },
+                   {
+                       "stage":  3,
+                       "date":  "2026-07-16T14:32:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下Reservation、RepairOrder，设备状态字段这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/domain/Reservation.java",
+                                     "src/main/java/com/lingyifan/lab/domain/RepairOrder.java"
+                                 ]
+                   },
+                   {
+                       "stage":  4,
+                       "date":  "2026-07-17T00:44:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "补了点Equipment、Reservation、RepairOrder的判断，设备状态字段没那么容易啊",
+                       "student_note":  "上次的原文件只能跑通一半，今天补逻辑补到有点晕。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/domain/Equipment.java",
+                                     "src/main/java/com/lingyifan/lab/domain/Reservation.java",
+                                     "src/main/java/com/lingyifan/lab/domain/RepairOrder.java"
+                                 ]
+                   },
+                   {
+                       "stage":  5,
+                       "date":  "2026-07-17T17:38:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整RepairOrder、Equipment，顺手把设备状态字段的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/domain/RepairOrder.java",
+                                     "src/main/java/com/lingyifan/lab/domain/Equipment.java"
+                                 ]
+                   },
+                   {
+                       "stage":  6,
+                       "date":  "2026-07-18T17:04:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "三个mapper补齐，先查得到数据",
+                       "student_note":  "复杂 SQL 还不会，能用 MyBatis-Plus 自带方法就先用。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/EquipmentMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  7,
+                       "date":  "2026-07-18T19:51:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复ReservationMapper、RepairOrderMapper的小bug，预约查询继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  8,
+                       "date":  "2026-07-18T17:04:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下EquipmentMapper、ReservationMapper、RepairOrderMapper的逻辑，预约查询先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/EquipmentMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  9,
+                       "date":  "2026-07-19T15:27:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下EquipmentMapper、ReservationMapper，预约查询这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/EquipmentMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  10,
+                       "date":  "2026-07-19T22:13:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "补了点RepairOrderMapper、EquipmentMapper的判断，预约查询没那么容易啊",
+                       "student_note":  "上次的原文件只能跑通一半，今天补逻辑补到有点晕。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/EquipmentMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  11,
+                       "date":  "2026-07-19T15:27:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整ReservationMapper、RepairOrderMapper，顺手把预约查询的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  12,
+                       "date":  "2026-07-19T22:13:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版ReservationMapper、RepairOrderMapper、EquipmentMapper，预约查询总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/EquipmentMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  13,
+                       "date":  "2026-07-20T15:55:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "预约业务开始写了，dto先堆一块",
+                       "student_note":  "Service 越写越长，但现在拆开怕自己更乱。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java"
+                                 ]
+                   },
+                   {
+                       "stage":  14,
+                       "date":  "2026-07-20T19:24:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下LabService、LabDtos的逻辑，预约业务先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java"
+                                 ]
+                   },
+                   {
+                       "stage":  15,
+                       "date":  "2026-07-21T14:57:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下ReservationMapper、LabService，预约业务这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  16,
+                       "date":  "2026-07-22T17:11:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "补了点LabDtos、Reservation、ReservationMapper的判断，预约业务没那么容易啊",
+                       "student_note":  "上次的原文件只能跑通一半，今天补逻辑补到有点晕。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java",
+                                     "src/main/java/com/lingyifan/lab/domain/Reservation.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  17,
+                       "date":  "2026-07-23T17:28:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整ReservationMapper、LabService，顺手把预约业务的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  18,
+                       "date":  "2026-07-23T21:22:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版Reservation、ReservationMapper，预约业务总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/domain/Reservation.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  19,
+                       "date":  "2026-07-25T16:35:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复LabService、LabDtos的小bug，预约业务继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java"
+                                 ]
+                   },
+                   {
+                       "stage":  20,
+                       "date":  "2026-07-26T01:40:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下Reservation、ReservationMapper、LabService的逻辑，预约业务先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/domain/Reservation.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  21,
+                       "date":  "2026-07-25T16:35:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下LabDtos、Reservation，预约业务这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java",
+                                     "src/main/java/com/lingyifan/lab/domain/Reservation.java"
+                                 ]
+                   },
+                   {
+                       "stage":  22,
+                       "date":  "2026-07-26T01:40:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "补了点ReservationMapper、LabService的判断，预约业务没那么容易啊",
+                       "student_note":  "上次的原文件只能跑通一半，今天补逻辑补到有点晕。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/ReservationMapper.java",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  23,
+                       "date":  "2026-07-26T15:51:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "设备和预约接口接出来了",
+                       "student_note":  "先用 Postman 一个接口一个接口点，返回能看懂就行。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java",
+                                     "README.md"
+                                 ]
+                   },
+                   {
+                       "stage":  24,
+                       "date":  "2026-07-26T21:43:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版LabController、LabService、LabDtos，借出归还接口总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java"
+                                 ]
+                   },
+                   {
+                       "stage":  25,
+                       "date":  "2026-07-26T15:51:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复LabDtos、README的小bug，借出归还接口继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java",
+                                     "README.md"
+                                 ]
+                   },
+                   {
+                       "stage":  26,
+                       "date":  "2026-07-26T21:43:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下LabController、LabService的逻辑，借出归还接口先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  27,
+                       "date":  "2026-07-27T17:36:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下README、LabController，借出归还接口这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "README.md",
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java"
+                                 ]
+                   },
+                   {
+                       "stage":  28,
+                       "date":  "2026-07-28T14:16:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "补了点LabService、LabDtos、README的判断，借出归还接口没那么容易啊",
+                       "student_note":  "上次的原文件只能跑通一半，今天补逻辑补到有点晕。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java",
+                                     "README.md"
+                                 ]
+                   },
+                   {
+                       "stage":  29,
+                       "date":  "2026-07-28T22:20:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整README、LabController，顺手把借出归还接口的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "README.md",
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java"
+                                 ]
+                   },
+                   {
+                       "stage":  30,
+                       "date":  "2026-07-29T16:06:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版LabDtos、README，借出归还接口总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java",
+                                     "README.md"
+                                 ]
+                   },
+                   {
+                       "stage":  31,
+                       "date":  "2026-07-31T15:04:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复LabController、LabService的小bug，借出归还接口继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  32,
+                       "date":  "2026-08-01T01:10:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下LabDtos、README、LabController的逻辑，借出归还接口先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java",
+                                     "README.md",
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java"
+                                 ]
+                   },
+                   {
+                       "stage":  33,
+                       "date":  "2026-08-01T17:33:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下LabService、LabDtos，借出归还接口这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "src/main/java/com/lingyifan/lab/api/LabDtos.java"
+                                 ]
+                   },
+                   {
+                       "stage":  34,
+                       "date":  "2026-08-01T22:08:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "补数据库配置和建表，先用H2跑",
+                       "student_note":  "MySQL 配置老报错，先切 H2 把业务逻辑测通。",
+                       "files":  [
+                                     "src/main/resources/application.yml",
+                                     "src/main/resources/schema.sql"
+                                 ]
+                   },
+                   {
+                       "stage":  35,
+                       "date":  "2026-08-01T17:33:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整schema、LabService，顺手把报修和数据库的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "src/main/resources/schema.sql",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  36,
+                       "date":  "2026-08-01T22:08:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版RepairOrder、application、schema，报修和数据库总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/domain/RepairOrder.java",
+                                     "src/main/resources/application.yml",
+                                     "src/main/resources/schema.sql"
+                                 ]
+                   },
+                   {
+                       "stage":  37,
+                       "date":  "2026-08-02T16:15:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复schema、LabService的小bug，报修和数据库继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "src/main/resources/schema.sql",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  38,
+                       "date":  "2026-08-02T23:32:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下RepairOrderMapper、RepairOrder的逻辑，报修和数据库先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java",
+                                     "src/main/java/com/lingyifan/lab/domain/RepairOrder.java"
+                                 ]
+                   },
+                   {
+                       "stage":  39,
+                       "date":  "2026-08-02T16:15:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下schema、LabService，报修和数据库这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/resources/schema.sql",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  40,
+                       "date":  "2026-08-02T23:32:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "补了点RepairOrderMapper、RepairOrder、application的判断，报修和数据库没那么容易啊",
+                       "student_note":  "上次的原文件只能跑通一半，今天补逻辑补到有点晕。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java",
+                                     "src/main/java/com/lingyifan/lab/domain/RepairOrder.java",
+                                     "src/main/resources/application.yml"
+                                 ]
+                   },
+                   {
+                       "stage":  41,
+                       "date":  "2026-08-03T14:12:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整application、schema，顺手把报修和数据库的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "src/main/resources/application.yml",
+                                     "src/main/resources/schema.sql"
+                                 ]
+                   },
+                   {
+                       "stage":  42,
+                       "date":  "2026-08-04T01:25:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版RepairOrderMapper、RepairOrder，报修和数据库总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java",
+                                     "src/main/java/com/lingyifan/lab/domain/RepairOrder.java"
+                                 ]
+                   },
+                   {
+                       "stage":  43,
+                       "date":  "2026-08-05T15:36:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复application、schema的小bug，报修和数据库继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "src/main/resources/application.yml",
+                                     "src/main/resources/schema.sql"
+                                 ]
+                   },
+                   {
+                       "stage":  44,
+                       "date":  "2026-08-06T14:04:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下LabService、RepairOrderMapper、RepairOrder的逻辑，报修和数据库先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java",
+                                     "src/main/java/com/lingyifan/lab/domain/RepairOrder.java"
+                                 ]
+                   },
+                   {
+                       "stage":  45,
+                       "date":  "2026-08-06T19:53:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下application、schema，报修和数据库这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/resources/application.yml",
+                                     "src/main/resources/schema.sql"
+                                 ]
+                   },
+                   {
+                       "stage":  46,
+                       "date":  "2026-08-08T17:55:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "补了点LabService、RepairOrderMapper的判断，报修和数据库没那么容易啊",
+                       "student_note":  "上次的原文件只能跑通一半，今天补逻辑补到有点晕。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "src/main/java/com/lingyifan/lab/mapper/RepairOrderMapper.java"
+                                 ]
+                   },
+                   {
+                       "stage":  47,
+                       "date":  "2026-08-08T21:05:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "统一异常补上，再写点预约测试",
+                       "student_note":  "前面异常直接炸页面不太行，后期才开始补测试兜底。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/ApiErrors.java",
+                                     "src/test/java/com/lingyifan/lab/LabManagerTests.java",
+                                     "NOTES.md"
+                                 ]
+                   },
+                   {
+                       "stage":  48,
+                       "date":  "2026-08-08T17:55:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版LabController、LabService、NOTES，异常和预约测试总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "NOTES.md"
+                                 ]
+                   },
+                   {
+                       "stage":  49,
+                       "date":  "2026-08-08T21:05:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复NOTES、ApiErrors的小bug，异常和预约测试继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "NOTES.md",
+                                     "src/main/java/com/lingyifan/lab/api/ApiErrors.java"
+                                 ]
+                   },
+                   {
+                       "stage":  50,
+                       "date":  "2026-08-09T17:06:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下LabManagerTests、LabController的逻辑，异常和预约测试先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/test/java/com/lingyifan/lab/LabManagerTests.java",
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java"
+                                 ]
+                   },
+                   {
+                       "stage":  51,
+                       "date":  "2026-08-10T01:26:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下NOTES、ApiErrors，异常和预约测试这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "NOTES.md",
+                                     "src/main/java/com/lingyifan/lab/api/ApiErrors.java"
+                                 ]
+                   },
+                   {
+                       "stage":  52,
+                       "date":  "2026-08-09T17:06:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "补了点LabManagerTests、LabController、LabService的判断，异常和预约测试没那么容易啊",
+                       "student_note":  "上次的原文件只能跑通一半，今天补逻辑补到有点晕。",
+                       "files":  [
+                                     "src/test/java/com/lingyifan/lab/LabManagerTests.java",
+                                     "src/main/java/com/lingyifan/lab/api/LabController.java",
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  53,
+                       "date":  "2026-08-10T01:26:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整LabService、NOTES，顺手把异常和预约测试的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/lab/service/LabService.java",
+                                     "NOTES.md"
+                                 ]
+                   },
+                   {
+                       "stage":  54,
+                       "date":  "2026-08-10T17:38:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "实验室项目docker化，配置又踩坑了",
+                       "student_note":  "本机能跑不代表容器能跑，连数据库地址改了好几次。",
+                       "files":  [
+                                     "Dockerfile",
+                                     "docker-compose.yml"
+                                 ]
+                   },
+                   {
+                       "stage":  55,
+                       "date":  "2026-08-11T17:59:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复Dockerfile、docker-compose的小bug，docker数据库继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "Dockerfile",
+                                     "docker-compose.yml"
+                                 ]
+                   }
+               ],
+    "base_branch":  null,
+    "strategy":  null,
+    "repository":  "campus-lab-manager"
+}
