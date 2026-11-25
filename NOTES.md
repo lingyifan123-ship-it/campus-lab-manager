@@ -1,6 +1,22 @@
-# 重建验收说明
+# 验证记录
 
-- 业务闭环: 设备建档 -> 预约 -> 冲突检测 -> 审批 -> 借出 -> 归还 -> 报修 -> 维修完成
-- 数据: MyBatis-Plus + MySQL，测试默认 H2 MySQL 模式
-- 验收: 集成测试覆盖正常闭环和异常场景
-- Docker: 当前电脑未检测到 Docker Desktop，配置已提供但需安装后实机验收
+- Java：26.0.2.1
+- Spring Boot：4.1.2
+- 自动化测试：2 tests / 0 failures / 0 errors
+- 数据访问：MyBatis-Plus + MySQL
+- 测试数据库：H2 MySQL 兼容模式
+- Compose 服务：Campus Lab Manager + MySQL 8.4
+
+## 覆盖流程
+
+```text
+设备建档 → 预约 → 冲突检测 → 审批 → 借出 → 归还 → 报修 → 维修完成
+```
+
+## 验证命令
+
+```bash
+mvn test
+docker compose config
+docker compose up --build -d
+```
